@@ -1,0 +1,113 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	background: #3c3c3c;
+}
+
+#app {
+	display: none;
+}
+
+/* sections */
+.cat-card {
+	background: #fff;
+	display: grid;
+	grid-template-areas: "cat-img cat-facts";
+	text-align: right;
+	border: none;
+	width: 50%;
+	margin: 5rem auto;
+}
+
+/* images */
+.image-container {
+	grid-area: cat-img;
+	text-align: left;
+	overflow: hidden;
+}
+
+.image-container > img {
+	width: 31rem;
+	height: 40rem;
+	object-fit: none;
+	margin-bottom: -4px;
+}
+
+/* text */
+.content {
+	font-size: x-large;
+	text-align: left;
+	height: 30rem;
+}
+
+.content > h1 {
+	margin-top: -0.5rem;
+}
+
+.cat-facts {
+	padding: 10px;
+	grid-area: cat-facts;
+}
+
+/* buttons */
+button {
+	cursor: pointer;
+}
+
+button.get-facts:hover {
+	transition: all 0.3s;
+	background: rgba(0, 0, 0, 0.87);
+}
+
+button.close {
+	background-color: #fff;
+	color: #000;
+	font-weight: 900;
+	font-size: x-large;
+	border: none;
+}
+
+button.get-facts {
+	font-size: x-large;
+	border: none;
+	color: white;
+	font-weight: 900;
+	background: #000;
+	padding: 15px 15px;
+	width: 95%;
+	margin: 0rem 15rem 0 0;
+}
+
+/* animation */
+.slide-up {
+	animation: 2s slide-up;
+	margin-top: 0%;
+}
+
+@keyframes slide-up {
+	from {
+		margin-top: 100%;
+		height: 300%;
+	}
+	to {
+		margin-top: 0%;
+		height: 100%;
+	}
+}
+
+.slide-down {
+	animation: 2s slide-down;
+	margin-top: 100%;
+}
+
+@keyframes slide-down {
+	from {
+		margin-top: 0%;
+		height: 100%;
+	}
+	to {
+		margin-top: 100%;
+		height: 300%;
+	}
+}
